@@ -132,14 +132,28 @@ nav a:hover {
 }
 
 .hero {
+  position: relative;
   padding: 4rem 0 2rem;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 15, 0.8) 0%, rgba(9, 13, 19, 0.64) 38%, rgba(9, 13, 19, 0.4) 100%),
+    url("assets/profile.png") center center / cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(141, 181, 255, 0.18), transparent 34%);
+  pointer-events: none;
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
+  grid-template-columns: minmax(0, 1.6fr) minmax(250px, 1fr);
   gap: 1.7rem;
-  align-items: start;
+  align-items: center;
 }
 
 .eyebrow {
@@ -204,11 +218,12 @@ h1 {
 .hero-card {
   align-self: start;
   height: auto;
-  background: linear-gradient(165deg, var(--surface), #0e1527);
-  border: 1px solid var(--border);
+  background: linear-gradient(165deg, rgba(17, 24, 41, 0.78), rgba(14, 21, 39, 0.72));
+  border: 1px solid rgba(156, 178, 224, 0.22);
   border-radius: 18px;
   padding: 1.2rem 1.3rem;
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 30px rgba(4, 8, 18, 0.32);
+  backdrop-filter: blur(4px);
 }
 
 .hero-card,
