@@ -133,10 +133,11 @@ nav a:hover {
 
 .hero {
   position: relative;
+  min-height: 70vh;
   padding: 4rem 0 2rem;
   background:
     linear-gradient(90deg, rgba(5, 8, 15, 0.8) 0%, rgba(9, 13, 19, 0.64) 38%, rgba(9, 13, 19, 0.4) 100%),
-    url("assets/profile.png") center center / cover no-repeat;
+    url("assets/profile.png") 52% 28% / cover no-repeat;
 }
 
 .hero::before {
@@ -216,7 +217,11 @@ h1 {
 }
 
 .hero-card {
-  align-self: start;
+  align-self: end;
+  justify-self: end;
+  width: min(100%, 320px);
+  margin-top: 3rem;
+  margin-left: auto;
   height: auto;
   background: linear-gradient(165deg, rgba(17, 24, 41, 0.78), rgba(14, 21, 39, 0.72));
   border: 1px solid rgba(156, 178, 224, 0.22);
@@ -490,6 +495,10 @@ h2 {
 }
 
 @media (max-width: 860px) {
+  .hero {
+    background-position: center center;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
   }
