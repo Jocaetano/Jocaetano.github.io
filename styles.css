@@ -510,18 +510,31 @@ h2 {
   }
 
   .timeline-row {
+    position: relative;
     grid-template-columns: 1fr;
   }
 
   .timeline-logo {
-    justify-self: start;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 44px;
     height: 44px;
+    justify-self: unset;
   }
 
   .timeline-logo-ufsc {
-    width: 48px;
-    height: 60px;
+    width: 44px;
+    height: 44px;
+    padding: 0.24rem;
+  }
+
+  .timeline-content h3 {
+    min-height: 44px;
+    margin-bottom: 0.45rem;
+    padding-left: 56px;
+    display: flex;
+    align-items: center;
   }
 
   nav {
